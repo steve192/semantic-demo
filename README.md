@@ -1,3 +1,4 @@
 # semantic-demo
 
 test
+ok

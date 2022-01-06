@@ -47,6 +47,7 @@ jobs:
           echo $VARI1
           echo $VARI2
           echo $GITHUB_REF_PROTECTED
+          echo $GITHUB_REF
 
       # Install the cosign tool except on PR
       # https://github.com/sigstore/cosign-installer

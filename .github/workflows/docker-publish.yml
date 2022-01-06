@@ -37,6 +37,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Test expressions
+        env:
+          VARI: "${{ github.event_name != 'pull_request' && github.ref_protected == 'true' }}"
+        run: echo $VARI
+
       # Install the cosign tool except on PR
       # https://github.com/sigstore/cosign-installer
       - name: Install cosign

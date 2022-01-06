@@ -41,7 +41,7 @@ jobs:
         env:
           VARI: "${{ github.event_name != 'pull_request' && github.ref_protected == 'true' }}"
           VARI1: "${{ github.event_name != 'pull_request'}}"
-          VARI2: "${{  github.ref_protected == 'true' }}"
+          VARI2: "${{  github.ref_protected == true }}"
         run: |
           echo $VARI
           echo $VARI1

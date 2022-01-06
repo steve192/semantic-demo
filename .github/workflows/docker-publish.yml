@@ -40,7 +40,12 @@ jobs:
       - name: Test expressions
         env:
           VARI: "${{ github.event_name != 'pull_request' && github.ref_protected == 'true' }}"
-        run: echo $VARI
+          VARI1: "${{ github.event_name != 'pull_request'}}"
+          VARI2: "${{  github.ref_protected == 'true' }}"
+        run: |
+          - "echo $VARI"
+          - "echo $VARI1"
+          - "echo $VARI2"
 
       # Install the cosign tool except on PR
       # https://github.com/sigstore/cosign-installer
